@@ -8,7 +8,7 @@
  - lose if you let 15 alien ships pass by or the ship touches an alien ship
 
 
- Afterwards, I used NeuroEvolution of Augmenting Topologies (NEAT), a genetic algorithm, to build the artificial intelligence that learns how to play the game. The algorithm takes some input and gives output values between 0 and 1(it depends on the activation function you are using), that represents the input and output nodes of the neural network. I used the absolute value of the difference in x and y between the ship and the closest alien ship and the x position of the ship as an input. The output, I selected to be a decision to perform one or more of the following actions: move left, move right, shoot.
+ Afterwards, I used NeuroEvolution of Augmenting Topologies (NEAT), a genetic algorithm, to build the artificial intelligence that learns how to play the game. The algorithm takes some input and gives output values between 0 and 1(it depends on the activation function), that represents the input and output nodes of the neural network. I used the absolute value of the difference in x and y between the ship and the closest alien ship and the x position of the ship as an input. The output, I selected to be a decision to perform one or more of the following actions: move left, move right, shoot.
 
 
  The performance of the AI:
