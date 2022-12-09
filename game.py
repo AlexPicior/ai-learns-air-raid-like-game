@@ -261,7 +261,7 @@ def get_min_diff_x_alienship(x_ship, y_ship):
     the_x = 0
     the_y = 0
     for alien_ship in alien_ships:
-        if abs(alien_ship.x - x_ship + 20) < abs(min_x_diff):
+        if abs(alien_ship.x - x_ship + 20) < abs(min_x_diff) and alien_ship.y > 50:
             min_x_diff = alien_ship.x - x_ship + 20
             the_x = alien_ship.x
             his_y_diff = alien_ship.y - y_ship
@@ -390,8 +390,8 @@ def run(config_path):
                          neat.DefaultSpeciesSet, neat.DefaultStagnation,
                          config_path)
     
-    #p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-7')
-    p = neat.Population(config)
+    p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-8')
+    #p = neat.Population(config)
     
     p.add_reporter(neat.StdOutReporter(True))
     stats = neat.StatisticsReporter()
